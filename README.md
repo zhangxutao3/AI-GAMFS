@@ -46,7 +46,7 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
 
 ## Usage
 1. **Download Model Files**:
-   - Download the model files from xxxx and place them in the `model` folder.
+   - Download the model files from [Zenodo](https://zenodo.org/records/16810754) and place them in the `model` folder.
 
 2. **Prepare GEOS-FP Data**:
    - The model uses GEOS-FP data, which only supports specific time points at 3-hour intervals: 01:30, 04:30, 07:30, 10:30, 13:30, 16:30, 19:30, 22:30 (UTC).
@@ -75,4 +75,3 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
 - **GPU Support**: If using a GPU, ensure the correct CUDA and cuDNN versions are installed (e.g., CUDA 11.8 for PyTorch). Check compatibility with PyTorch.
 - **Data Formats**: GEOS-FP data is typically in NetCDF format. Use `xarray` or `netCDF4` for processing.
 - **Base Environment**: Modifying the `base` environment may affect other projects. Consider creating a dedicated environment (e.g., `conda create -n ai-gamfs`) to avoid conflicts.
-
