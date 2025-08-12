@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI-driven Global Aerosol-Meteorology Forecasting System (AI-GAMFS)
 
 ## Project Overview
@@ -68,3 +69,75 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
 - **GPU Support**: If using a GPU, ensure the correct CUDA and cuDNN versions are installed (e.g., CUDA 11.8 for PyTorch). Check compatibility with PyTorch.
 - **Data Formats**: GEOS-FP data is typically in NetCDF format. Use `xarray` or `netCDF4` for processing.
 - **Base Environment**: Modifying the `base` environment may affect other projects. Consider creating a dedicated environment (e.g., `conda create -n ai-gamfs`) to avoid conflicts.
+=======
+# AI-driven Global Aerosol-Meteorology Forecasting System (AI-GAMFS)
+
+## Project Overview
+AI-GAMFS is a deep learning-based model for global aerosol-meteorology coupled forecasting. It leverages PyTorch to provide high-accuracy predictions for aerosol and meteorological data, utilizing datasets such as GEOS-FP.
+
+## Environment Setup
+To set up the project environment, ensure you have [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed.
+
+1. **Configure the `base` environment**:
+   The project uses the `base` Anaconda environment with Python 3.11.4. Update it with the provided `environment.yml`:
+   ```bash
+   conda env update -n base -f environment.yml
+   ```
+
+2. **Activate the environment**:
+   ```bash
+   conda activate base
+   ```
+
+## Dependencies
+The project requires the following dependencies (included in `environment.yml`):
+- Python 3.11.4
+- `pandas` (for data manipulation, e.g., time range generation)
+- `numpy` (for numerical computations)
+- `pytorch` (deep learning framework)
+- `xarray` (for handling NetCDF files, common in meteorological data)
+- `netCDF4` (for GEOS-FP data processing)
+- `matplotlib` and `seaborn` (for visualization)
+- `h5py` (optional, for HDF5 file handling if needed)
+
+To manually install dependencies in the `base` environment:
+```bash
+conda install pandas numpy xarray netCDF4 matplotlib seaborn h5py
+# Install PyTorch (CPU)
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+# Or PyTorch (GPU, if supported)
+conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
+```
+
+## Usage
+1. **Download Model Files**:
+   - Download the model files from xxxx and place them in the `model` folder.
+
+2. **Prepare GEOS-FP Data**:
+   - The model uses GEOS-FP data, which only supports specific time points at 3-hour intervals: 01:30, 04:30, 07:30, 10:30, 13:30, 16:30, 19:30, 22:30 (UTC).
+   - Ensure your input data aligns with these time points.
+
+3. **Configure Inference**:
+   - Open `inference.py` and modify line 106 to set the desired time range:
+     ```python
+     date_range = pd.date_range(
+         start="2024-08-26 22:30:00",
+         end="2024-08-27 22:30:00",
+         freq="1D"
+     )
+     ```
+
+4. **Run Inference**:
+   ```bash
+   python inference.py
+   ```
+
+5. **Check Results**:
+   - Forecasting results are stored in the `inference` folder.
+
+## Notes
+- **Time Restrictions**: Always verify that time points in `inference.py` match GEOS-FP's 3-hourly half-hour intervals (e.g., 01:30, 04:30). Invalid time points will cause errors.
+- **GPU Support**: If using a GPU, ensure the correct CUDA and cuDNN versions are installed (e.g., CUDA 11.8 for PyTorch). Check compatibility with PyTorch.
+- **Data Formats**: GEOS-FP data is typically in NetCDF format. Use `xarray` or `netCDF4` for processing.
+- **Base Environment**: Modifying the `base` environment may affect other projects. Consider creating a dedicated environment (e.g., `conda create -n ai-gamfs`) to avoid conflicts.
+>>>>>>> 721bb3c4b65e0e412acd41cec13a8fc01b7a1e1a
