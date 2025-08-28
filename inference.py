@@ -7,6 +7,7 @@ import torch
 import sys
 import os
 import subprocess
+import platform
 
 sys.path.append(".")
 
@@ -50,7 +51,11 @@ def download_file(url, download_folder="/data/GEOS-FP", local_filename=None):
     print(f"开始下载文件: {url}")
     os.makedirs(download_folder, exist_ok=True)
     try:
-        wget_command = ["./wget.exe", "-c", url, "-O", file_path]
+        system = platform.system().lower()
+        if system == "windows":
+            wget_command = ["./wget.exe", "-c", url, "-O", file_path]
+        elif system == "linux":
+            wget_command = ["wget", "-c", url, "-O", file_path]
         subprocess.run(wget_command, check=True)
         # 验证下载的文件是否有效
         try:

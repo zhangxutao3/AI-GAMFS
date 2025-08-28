@@ -17,6 +17,11 @@ Below is the schematic diagram of the AI-GAMFS model architecture:
 - **Software**: 
   - [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
   - Git (for cloning the repository)
+  - **wget**: Required for downloading GEOS-FP data on Linux systems. Install it using:
+    ```bash
+    sudo apt-get update
+    sudo apt-get install wget
+    ```
 
 ## Getting Started
 To begin, clone this project to your local machine:
