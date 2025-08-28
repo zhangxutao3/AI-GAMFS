@@ -56,6 +56,7 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
 2. **Prepare GEOS-FP Data**:
    - The model uses GEOS-FP data, which only supports specific time points at 3-hour intervals: 01:30, 04:30, 07:30, 10:30, 13:30, 16:30, 19:30, 22:30 (UTC).
    - Ensure your input data aligns with these time points.
+   - ***GEOS-FP data is automatically downloaded through inference.py and does not require manual download.***
 
 3. **Configure Inference**:
    - Open `inference.py` and modify line 106 to set the desired time range:
