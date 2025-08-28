@@ -8,6 +8,16 @@ Below is the schematic diagram of the AI-GAMFS model architecture:
 
 ![AI-GAMFS Model Architecture](model.png)
 
+## System Requirements
+- **Operating System**: Ubuntu 22.04 (recommended for optimal compatibility and performance)
+- **Hardware**: 
+  - CPU: Multi-core processor (e.g., Intel i5 or higher)
+  - GPU: NVIDIA GPU with CUDA support (optional, for faster computation)
+  - GPU-RAM: Minimum 24 GB
+- **Software**: 
+  - [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+  - Git (for cloning the repository)
+
 ## Getting Started
 To begin, clone this project to your local machine:
 ```bash
@@ -15,7 +25,7 @@ git clone https://github.com/zhangxutao3/AI-GAMFS.git
 cd AI-GAMFS
 ```
 
-## Environment Setup
+## Python Environment Dependencies
 To set up the project environment, ensure you have [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed.
 
 1. **Configure the `base` environment**:
@@ -29,27 +39,37 @@ To set up the project environment, ensure you have [Anaconda](https://www.anacon
    conda activate base
    ```
 
-## Dependencies
-The project requires the following dependencies (included in `environment.yml`):
-- Python 3.11.4
-- `pandas` (for data manipulation, e.g., time range generation)
-- `numpy` (for numerical computations)
-- `pytorch` (deep learning framework)
-- `xarray` (for handling NetCDF files, common in meteorological data)
-- `netCDF4` (for GEOS-FP data processing)
-- `matplotlib` and `seaborn` (for visualization)
-- `h5py` (optional, for HDF5 file handling if needed)
+3. **Dependencies**:
+   The project requires the following dependencies (included in `environment.yml`):
+   - Python 3.11.4
+   - `pandas` (for data manipulation, e.g., time range generation)
+   - `numpy` (for numerical computations)
+   - `pytorch` (deep learning framework)
+   - `xarray` (for handling NetCDF files, common in meteorological data)
+   - `netCDF4` (for GEOS-FP data processing)
+   - `matplotlib` and `seaborn` (for visualization)
+   - `h5py` (optional, for HDF5 file handling if needed)
 
-To manually install dependencies in the `base` environment:
-```bash
-conda install pandas numpy xarray netCDF4 matplotlib seaborn h5py
-# Install PyTorch (CPU)
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
-# Or PyTorch (GPU, if supported)
-conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
-```
+   To manually install dependencies in the `base` environment:
+   ```bash
+   conda install pandas numpy xarray netCDF4 matplotlib seaborn h5py
+   # Install PyTorch (CPU)
+   conda install pytorch torchvision torchaudio cpuonly -c pytorch
+   # Or PyTorch (GPU, if supported)
+   conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
+   ```
 
-## Usage
+## Folder Structure
+- **temp_asm**: Temporary storage for GEOS-FP initial field data.
+- **inference**: Stores model inference results in the format `20250827_0430/AI_GAMFS.20250827_0430+20250827_0730.V01.nc`, where:
+  - `20250827_0430` is the initial field timestamp.
+  - `20250827_0730` is the forecast timestamp.
+  - `V01` is the version.
+  - `AI_GAMFS` is the framework name.
+- **model**: Contains model files downloaded from Zenodo.
+- **utils**: Includes tools for model operations.
+
+## Usage Guide
 1. **Download Model Files**:
    - Download the model files from [Zenodo](https://zenodo.org/records/16810754) and place them in the `model` folder.
 
@@ -95,5 +115,4 @@ If you use AI-GAMFS in your research, please cite the following paper:
       primaryClass={physics.ao-ph},
       url={https://arxiv.org/abs/2412.02498}, 
 }
-```
 ```
