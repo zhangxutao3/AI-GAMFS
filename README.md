@@ -3,6 +3,11 @@
 ## Project Overview
 AI-GAMFS is a deep learning-based model for global aerosol-meteorology coupled forecasting. It leverages PyTorch to provide high-accuracy predictions for aerosol and meteorological data, utilizing datasets such as GEOS-FP.
 
+## Model Architecture
+Below is the schematic diagram of the AI-GAMFS model architecture:
+
+![AI-GAMFS Model Architecture](model.png)
+
 ## Getting Started
 To begin, clone this project to your local machine:
 ```bash
@@ -75,3 +80,19 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
 - **GPU Support**: If using a GPU, ensure the correct CUDA and cuDNN versions are installed (e.g., CUDA 11.8 for PyTorch). Check compatibility with PyTorch.
 - **Data Formats**: GEOS-FP data is typically in NetCDF format. Use `xarray` or `netCDF4` for processing.
 - **Base Environment**: Modifying the `base` environment may affect other projects. Consider creating a dedicated environment (e.g., `conda create -n ai-gamfs`) to avoid conflicts.
+
+## Citation
+If you use AI-GAMFS in your research, please cite the following paper:
+
+```bibtex
+@misc{gui2024advancingglobalaerosolforecasting,
+      title={Advancing global aerosol forecasting with artificial intelligence}, 
+      author={Ke Gui and Xutao Zhang and Huizheng Che and Lei Li and Yu Zheng and Linchang An and Yucong Miao and Hujia Zhao and Oleg Dubovik and Brent Holben and Jun Wang and Pawan Gupta and Elena S. Lind and Carlos Toledano and Hong Wang and Zhili Wang and Yaqiang Wang and Xiaomeng Huang and Kan Dai and Xiangao Xia and Xiaofeng Xu and Xiaoye Zhang},
+      year={2024},
+      eprint={2412.02498},
+      archivePrefix={arXiv},
+      primaryClass={physics.ao-ph},
+      url={https://arxiv.org/abs/2412.02498}, 
+}
+```
+```
