@@ -88,7 +88,7 @@ AI_GAMFS is the framework name.
 ### Step 1: Download Model Files
 
 
-Download the model files from [Zenodo](https://zenodo.org/records/16810754) or [Hugging Face](https://huggingface.co/zhangxutao/AI-GAMFS) and place them in the model folder.
+Download the model files from [Zenodo](https://zenodo.org/records/16810754), [Hugging Face](https://huggingface.co/zhangxutao/AI-GAMFS) or [Aliyun Drive](https://www.alipan.com/s/vcwyKVTeiFj) and place them in the model folder.
 
 
 Available models include:
@@ -105,7 +105,7 @@ Available models include:
 - The model uses GEOS-FP data, which supports specific time points at 3-hour intervals: 01:30, 04:30, 07:30, 10:30, 13:30, 16:30, 19:30, 22:30 (UTC).
 - Ensure your input data aligns with these time points.
 - **Note**: GEOS-FP data is automatically downloaded via inference.py and does not require manual download.
-- **Note**: Test GEOS-FP data is provided for quick verification. Download from [Hugging Face](https://huggingface.co/zhangxutao/AI-GAMFS/tree/main) or [Zenodo](https://zenodo.org/uploads/17590231) and replace the contents of the temp_asm folder with the downloaded files.
+- **Note**: Test GEOS-FP data is provided for quick verification. Download from [Hugging Face](https://huggingface.co/zhangxutao/AI-GAMFS/tree/main), [Zenodo](https://zenodo.org/uploads/17590231) or [Aliyun Drive](https://www.alipan.com/s/vcwyKVTeiFj) and replace the contents of the temp_asm folder with the downloaded files.
 
 ### Step 3: Configure Inference
 
