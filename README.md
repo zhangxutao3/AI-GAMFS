@@ -112,7 +112,7 @@ Open inference.py and modify line 106 to set the desired time range:
 
 
 ```python
-pythonCollapseWrapRunCopydate_range = pd.date_range(
+date_range = pd.date_range(
     start="2024-08-26 22:30:00",
     end="2024-08-27 22:30:00",
     freq="1D"
@@ -150,7 +150,7 @@ If you use AI-GAMFS in your research, please cite the following paper:
 
 
 ```bibtex
-bibtexCollapseWrapCopy@misc{gui2024advancingglobalaerosolforecasting,
+@misc{gui2024advancingglobalaerosolforecasting,
       title={Advancing global aerosol forecasting with artificial intelligence},
       author={Ke Gui and Xutao Zhang and Huizheng Che and Lei Li and Yu Zheng and Linchang An and Yucong Miao and Hujia Zhao and Oleg Dubovik and Brent Holben and Jun Wang and Pawan Gupta and Elena S. Lind and Carlos Toledano and Hong Wang and Zhili Wang and Yaqiang Wang and Xiaomeng Huang and Kan Dai and Xiangao Xia and Xiaofeng Xu and Xiaoye Zhang},
       year={2024},
