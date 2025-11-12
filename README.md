@@ -33,15 +33,15 @@ cd AI-GAMFS
 ## Python Environment Setup
 1. **Create a new conda environment named gamfs**:
 ```bash
-bashCollapseWrapRunCopyconda create -n gamfs python=3.11
+conda create -n gamfs python=3.11
 ```
 2. **Activate the environment**:
 ```bash
-bashCollapseWrapRunCopyconda activate gamfs
+conda activate gamfs
 ```
 3. **Install dependencies using requirements.txt**:
 ```bash
-bashCollapseWrapRunCopypip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 All required packages (including PyTorch, xarray, etc.) are listed in requirements.txt.
@@ -58,7 +58,12 @@ All required packages (including PyTorch, xarray, etc.) are listed in requiremen
 
 ## Usage Guide
 1. **Download Model Files**:
-   - Download the model files from [Zenodo](https://zenodo.org/records/16810754) and place them in the `model` folder.
+- Download the model files from [Zenodo](https://zenodo.org/records/16810754) or [Hugging Face](https://huggingface.co/zhangxutao/AI-GAMFS) and place them in the model folder.
+- Available models include:
+gamfs_3h_traced.pt (4.85 GB) – For 3-hour forecasts
+gamfs_6h_traced.pt (4.85 GB) – For 6-hour forecasts
+gamfs_9h_traced.pt (4.85 GB) – For 9-hour forecasts
+gamfs_12h_traced.pt (4.85 GB) – For 12-hour forecasts
 
 2. **Prepare GEOS-FP Data**:
    - The model uses GEOS-FP data, which only supports specific time points at 3-hour intervals: 01:30, 04:30, 07:30, 10:30, 13:30, 16:30, 19:30, 22:30 (UTC).
