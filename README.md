@@ -27,7 +27,7 @@ GPU-RAM: Minimum 24 GB.
 - **Software**:
 [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 Git (for cloning the repository).
-**wget**: Required for downloading GEOS-FP data on Linux systems. Install it using:
+- **wget**: Required for downloading GEOS-FP data on Linux systems. Install it using:
 ```bash
 sudo apt-get update
 sudo apt-get install wget
