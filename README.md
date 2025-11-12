@@ -23,7 +23,7 @@ Below is the schematic diagram of the AI-GAMFS model architecture:
 - **Hardware**:
 CPU: Multi-core processor (e.g., Intel i5 or higher).
 GPU: NVIDIA GPU with CUDA support (optional, for faster computation).
-GPU-RAM: Minimum 24 GB.
+GPU-RAM: Minimum 16 GB.
 - **Software**:
 [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 Git (for cloning the repository).
@@ -105,7 +105,7 @@ Available models include:
 - The model uses GEOS-FP data, which supports specific time points at 3-hour intervals: 01:30, 04:30, 07:30, 10:30, 13:30, 16:30, 19:30, 22:30 (UTC).
 - Ensure your input data aligns with these time points.
 - **Note**: GEOS-FP data is automatically downloaded via inference.py and does not require manual download.
-- **Note**: Test GEOS-FP data is provided for quick verification. Download from [Hugging Face](https://huggingface.co/datasets/zhangxutao/AI-GAMFS-test-data) or [Zenodo](https://zenodo.org/records/xxxxxxx) and replace the contents of the temp_asm folder with the downloaded files.
+- **Note**: Test GEOS-FP data is provided for quick verification. Download from [Hugging Face](https://huggingface.co/zhangxutao/AI-GAMFS/tree/main) or [Zenodo](https://zenodo.org/uploads/17590231) and replace the contents of the temp_asm folder with the downloaded files.
 
 ### Step 3: Configure Inference
 
