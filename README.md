@@ -30,39 +30,21 @@ git clone https://github.com/zhangxutao3/AI-GAMFS.git
 cd AI-GAMFS
 ```
 
-## Python Environment Dependencies
-To set up the project environment, ensure you have [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed.
-
-1. **Configure the `base` environment**:
-   The project uses the `base` Anaconda environment with Python 3.11.4. Update it with the provided `environment.yml`:
-   ```bash
-   conda env update -n base -f environment.yml
-   ```
-
+## Python Environment Setup
+1. **Create a new conda environment named gamfs**:
+```bash
+bashCollapseWrapRunCopyconda create -n gamfs python=3.11
+```
 2. **Activate the environment**:
-   ```bash
-   conda activate base
-   ```
+```bash
+bashCollapseWrapRunCopyconda activate gamfs
+```
+3. **Install dependencies using requirements.txt**:
+```bash
+bashCollapseWrapRunCopypip install -r requirements.txt
+```
 
-3. **Dependencies**:
-   The project requires the following dependencies (included in `environment.yml`):
-   - Python 3.11.4
-   - `pandas` (for data manipulation, e.g., time range generation)
-   - `numpy` (for numerical computations)
-   - `pytorch` (deep learning framework)
-   - `xarray` (for handling NetCDF files, common in meteorological data)
-   - `netCDF4` (for GEOS-FP data processing)
-   - `matplotlib` and `seaborn` (for visualization)
-   - `h5py` (optional, for HDF5 file handling if needed)
-
-   To manually install dependencies in the `base` environment:
-   ```bash
-   conda install pandas numpy xarray netCDF4 matplotlib seaborn h5py
-   # Install PyTorch (CPU)
-   conda install pytorch torchvision torchaudio cpuonly -c pytorch
-   # Or PyTorch (GPU, if supported)
-   conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
-   ```
+All required packages (including PyTorch, xarray, etc.) are listed in requirements.txt.
 
 ## Folder Structure
 - **temp_asm**: Temporary storage for GEOS-FP initial field data.
