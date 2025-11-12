@@ -105,6 +105,7 @@ Available models include:
 - The model uses GEOS-FP data, which supports specific time points at 3-hour intervals: 01:30, 04:30, 07:30, 10:30, 13:30, 16:30, 19:30, 22:30 (UTC).
 - Ensure your input data aligns with these time points.
 - **Note**: GEOS-FP data is automatically downloaded via inference.py and does not require manual download.
+- **Note**: Test GEOS-FP data is provided for quick verification. Download from [Hugging Face](https://huggingface.co/datasets/zhangxutao/AI-GAMFS-test-data) or [Zenodo](https://zenodo.org/records/xxxxxxx) and replace the contents of the temp_asm folder with the downloaded files.
 
 ### Step 3: Configure Inference
 
