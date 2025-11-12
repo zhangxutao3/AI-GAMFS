@@ -1,0 +1,14 @@
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+torch==2.6.0
+cmaps==2.0.1
+emoji==2.14.1
+matplotlib==3.10.7
+numpy==1.26.4
+pandas==2.3.3
+pytz==2025.2
+PyYAML==6.0.2
+tqdm==4.67.1
+xarray==2025.6.1
+netCDF4==1.7.3
+scipy==1.16.3
