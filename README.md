@@ -31,8 +31,7 @@ Git (for cloning the repository).
 ```bash
 sudo apt-get update
 sudo apt-get install wget
-```
-**For Windows systems, wget is built into the project and does not require additional installation.**
+```For Windows systems, wget is built into the project and does not require additional installation.
 
 ## Installation
 
