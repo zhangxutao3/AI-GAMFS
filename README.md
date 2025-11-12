@@ -29,7 +29,7 @@ GPU-RAM: Minimum 24 GB.
 Git (for cloning the repository).
 **wget**: Required for downloading GEOS-FP data on Linux systems. Install it using:
 ```bash
-bashCollapseWrapRunCopysudo apt-get update
+sudo apt-get update
 sudo apt-get install wget
 ```
 
@@ -43,7 +43,7 @@ To get started, clone the project to your local machine:
 
 
 ```bash
-bashCollapseWrapRunCopygit clone https://github.com/zhangxutao3/AI-GAMFS.git
+git clone https://github.com/zhangxutao3/AI-GAMFS.git
 cd AI-GAMFS
 ```
 
@@ -52,11 +52,11 @@ cd AI-GAMFS
 
 1. Create a new conda environment named gamfs:
 ```bash
-bashCollapseWrapRunCopyconda create -n gamfs python=3.11
+conda create -n gamfs python=3.11
 ```
 2. Activate the environment:
 ```bash
-bashCollapseWrapRunCopyconda activate gamfs
+conda activate gamfs
 ```
 
 ### Step 3: Install Dependencies
@@ -66,7 +66,7 @@ Install all required packages (including PyTorch, xarray, etc.) using the provid
 
 
 ```bash
-bashCollapseWrapRunCopypip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Folder Structure
@@ -126,7 +126,7 @@ Execute the inference script:
 
 
 ```bash
-bashCollapseWrapRunCopypython inference.py
+python inference.py
 ```
 
 ### Step 5: View Results
