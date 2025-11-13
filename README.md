@@ -115,8 +115,8 @@ Open inference.py and modify line 106 to set the desired time range:
 
 ```python
 date_range = pd.date_range(
-    start="2024-08-26 22:30:00",
-    end="2024-08-27 22:30:00",
+    start="2024-07-26 22:30:00",
+    end="2024-07-26 22:30:00",
     freq="1D"
 )
 ```
