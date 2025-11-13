@@ -23,7 +23,7 @@ Below is the schematic diagram of the AI-GAMFS model architecture:
 - **Hardware**:
 CPU: Multi-core processor (e.g., Intel i5 or higher).
 GPU: NVIDIA GPU with CUDA support (optional, for faster computation).
-GPU-RAM: Minimum 16 GB.
+RAM: Requires more than 26 GB of combined dedicated and shared GPU memory.
 - **Software**:
 [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 Git (for cloning the repository).
