@@ -110,7 +110,7 @@ Available models include:
 ### Step 3: Configure Inference
 
 
-Open inference.py and modify line 106 to set the desired time range:
+Open inference.py and modify line 115 to set the desired time range:
 
 
 ```python
